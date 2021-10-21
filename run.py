@@ -1,5 +1,5 @@
 import os # import os from python library
-from flask import Flask
+from flask import Flask, render_template
 # from flask import class name Flask
 # capital latter mean class name
 
@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route("/")  # app.outer decorator @(pie-notation)
 # "/"  triggers the index function
 def index():  # this function return only Hello, World
-    return "Hello, World"
+    return  render_template("index.html")  # "<h1>Hello,</h1> <h2>World</h2>"
 
 
 if __name__ == "__main__":  # __name__ is he default name in python
