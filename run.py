@@ -23,6 +23,11 @@ def contact():
     return render_template("contact.html")
 
 
+@app.route("/careers")
+def careers():
+    return render_template("careers.html")
+
+
 if __name__ == "__main__":  # __name__ is he default name in python
     app.run(
         host=os.environ.get("IP", "0.0.0.0"),
